@@ -10,6 +10,9 @@ import com.API.flowers.models.Flower;
 public class FlowerMapper {
 
 	
+	/**
+	 * Converts a list of Flower into a list of FlowerDTO
+	 * */
 	public ArrayList<FlowerDTO> domainToDTOs(ArrayList<Flower> flowers) {
 		
 		ArrayList<FlowerDTO> flowersDTO = new ArrayList<FlowerDTO>();

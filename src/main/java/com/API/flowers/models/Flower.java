@@ -5,7 +5,7 @@ public class Flower {
 	private String name;
 	private float price;
 	
-	Flower(String id, String name, float price){
+	public Flower(String id, String name, float price){
 		this.id = id;
 		this.name = name;
 		this.price = price;
@@ -37,5 +37,10 @@ public class Flower {
 	
 	public Flower clone(){
 		return new Flower(this.id, this.name, this.price);
+	}
+	
+	@Override
+	public String toString() {
+		return ""+this.id+", "+this.name+", "+this.price;
 	}
 }
