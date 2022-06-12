@@ -15,18 +15,22 @@ public class FlowerService {
 	public static ArrayList<Flower> flowers;
 	
 	
-	FlowerService(){
+	public FlowerService(){
 		FlowerService.flowers = new ArrayList<Flower>();
 	}
 	
 	
-	
+	/**
+	 * Saves a list of flowers
+	 * */
 	public void setFlowers(ArrayList<Flower> flowers){
 		FlowerService.flowers = flowers;
 	}
 	
 	
-	
+	/**
+	 * Returns a list of flowers sorted descending by name and with -kometsales at the end
+	 * */
 	public ArrayList<Flower> getFlowers(){
 		
 		ArrayList<Flower> flowersCopy = this.copyFlowers();
@@ -41,6 +45,9 @@ public class FlowerService {
 	}
 	
 	
+	/**
+	 * Returns a list of flowers which the price is greater than 20
+	 * */
 	public ArrayList<Flower> getPriceGreaterThan20(){
 		
 		ArrayList<Flower> filteredFlowers = new ArrayList<Flower>();
@@ -54,6 +61,11 @@ public class FlowerService {
 		return filteredFlowers;
 	}
 	
+	
+	
+	/**
+	 * Deletes a flower by id 
+	 * */
 	public String deleateFlower(String id) {
 		int index = -1;
 		
@@ -72,6 +84,9 @@ public class FlowerService {
 	}
 	
 	
+	/**
+	 * Returns a list of flowers which the name is equal to the param name 
+	 * */
 	public ArrayList<Flower> getFlowersByName(String name){
 		
 		ArrayList<Flower> filteredFlowers = new ArrayList<Flower>();
@@ -85,6 +100,10 @@ public class FlowerService {
 		return filteredFlowers;
 	}
 	
+	
+	/**
+	 * Returns a copy of the flowers list 
+	 * */
 	private ArrayList<Flower> copyFlowers(){
 		ArrayList<Flower> flowersCopy = new ArrayList<Flower>();
 		Iterator<Flower> iterator = FlowerService.flowers.iterator();
