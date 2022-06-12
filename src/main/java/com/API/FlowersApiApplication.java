@@ -1,4 +1,4 @@
-package com.flowers;
+package com.API;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
